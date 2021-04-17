@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: PleiadesJavaPerspective
+Bundle-SymbolicName: jp.sourceforge.mergedoc.PleiadesJavaPerspective;singleton:=true
+Bundle-Version: 1.4.1
+Bundle-Vendor: MergeDoc Project
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Require-Bundle: org.eclipse.ui;bundle-version="3.103.0",
+ org.eclipse.ui.console;bundle-version="3.5.100",
+ org.eclipse.search;bundle-version="3.8.0",
+ org.eclipse.debug.ui;bundle-version="3.8.0",
+ org.eclipse.jdt.ui;bundle-version="3.8.0",
+ org.eclipse.ui.workbench.texteditor;bundle-version="3.8.0"

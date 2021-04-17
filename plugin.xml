@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+	<extension
+			point="org.eclipse.ui.perspectives">
+		<perspective
+			class="jp.sourceforge.mergedoc.PleiadesJavaPerspectiveFactory"
+			id="jp.sourceforge.mergedoc.PleiadesJavaPerspective"
+			icon="icons/jperspective.png"
+			name="Java">
+		</perspective>
+	</extension>
+
+</plugin>

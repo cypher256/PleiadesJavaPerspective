@@ -59,13 +59,13 @@ public class PleiadesJavaPerspectiveFactory implements IPerspectiveFactory {
 		//layout.addActionSet("org.eclipse.jst.j2ee.J2eeMainActionSet"); // 頻度低のため使用しない
 
 		// 新規作成ウィザード - プロジェクト
-		layout.addNewWizardShortcut("org.eclipse.jdt.ui.wizards.JavaProjectWizard");
 		layout.addNewWizardShortcut("org.eclipse.buildship.ui.wizard.project.creation");
 		layout.addNewWizardShortcut("org.eclipse.m2e.core.wizards.Maven2ProjectWizard");
 		layout.addNewWizardShortcut("org.springsource.ide.eclipse.commons.gettingstarted.wizard.boot.NewSpringBootWizard");
 		layout.addNewWizardShortcut("org.springsource.ide.eclipse.gettingstarted.wizards.import.generic.newalias");
 		layout.addNewWizardShortcut("org.eclipse.jst.servlet.ui.project.facet.WebProjectWizard");
-		
+		layout.addNewWizardShortcut("org.eclipse.jdt.ui.wizards.JavaProjectWizard");
+
 		// 新規作成ウィザード - ファイル作成ウィザード
 		layout.addNewWizardShortcut("org.eclipse.jdt.ui.wizards.NewPackageCreationWizard");
 		// 簡単に Java 要素のみ制限できないため有効にしない、ツールバーからは起動可能、Jakarta 未対応
@@ -81,7 +81,7 @@ public class PleiadesJavaPerspectiveFactory implements IPerspectiveFactory {
 		layout.addNewWizardShortcut("org.eclipse.ui.wizards.new.folder");
 		layout.addNewWizardShortcut("org.eclipse.ui.wizards.new.file");
 		layout.addNewWizardShortcut("org.eclipse.ui.editors.wizards.UntitledTextFileWizard");
-		
+
 		layout.addNewWizardShortcut("org.eclipse.wst.html.ui.internal.wizard.NewHTMLWizard");
 		layout.addNewWizardShortcut("org.eclipse.wst.css.ui.internal.wizard.NewCSSWizard");
 		layout.addNewWizardShortcut("org.eclipse.wst.jsdt.ui.NewJSWizard");
@@ -114,4 +114,3 @@ public class PleiadesJavaPerspectiveFactory implements IPerspectiveFactory {
 		layout.addPerspectiveShortcut(IDebugUIConstants.ID_DEBUG_PERSPECTIVE);
 	}
 }
-

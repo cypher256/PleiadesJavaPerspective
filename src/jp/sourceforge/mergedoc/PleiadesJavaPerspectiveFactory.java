@@ -45,7 +45,7 @@ public class PleiadesJavaPerspectiveFactory implements IPerspectiveFactory {
 		outline.addPlaceholder(IDebugUIConstants.ID_DEBUG_VIEW);
 
 		IFolderLayout runner = layout.createFolder("runner", IPageLayout.BOTTOM, 0.5f, "outline");
-		runner.addView("com.eclipserunner.views.RunnerView");
+		runner.addView("org.eclipse.debug.ui.launchview");
 		runner.addView("org.eclipse.buildship.ui.views.taskview");
 		runner.addView("org.eclipse.wst.server.ui.ServersView");
 		runner.addPlaceholder("org.springframework.ide.eclipse.boot.dash.views.BootDashView");
@@ -107,7 +107,7 @@ public class PleiadesJavaPerspectiveFactory implements IPerspectiveFactory {
 		layout.addShowViewShortcut("org.eclipse.wst.server.ui.ServersView");
 		layout.addShowViewShortcut("org.springframework.ide.eclipse.boot.dash.views.BootDashView");
 		layout.addShowViewShortcut("de.babe.eclipse.plugins.quickREx.views.QuickRExView");
-		layout.addShowViewShortcut("com.eclipserunner.views.RunnerView");
+		layout.addShowViewShortcut("org.eclipse.debug.ui.launchview");
 
 		// メニュー > ウィンドウ > パースペクティブを開く
 		layout.addPerspectiveShortcut(JavaUI.ID_PERSPECTIVE);

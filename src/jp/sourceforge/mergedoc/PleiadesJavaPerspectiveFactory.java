@@ -44,11 +44,11 @@ public class PleiadesJavaPerspectiveFactory implements IPerspectiveFactory {
 		outline.addPlaceholder("org.eclipse.ui.views.ProgressView");
 		outline.addPlaceholder(IDebugUIConstants.ID_DEBUG_VIEW);
 
-		IFolderLayout runner = layout.createFolder("runner", IPageLayout.BOTTOM, 0.5f, "outline");
-		runner.addView("org.eclipse.debug.ui.launchview");
-		runner.addView("org.eclipse.buildship.ui.views.taskview");
-		runner.addView("org.eclipse.wst.server.ui.ServersView");
-		runner.addPlaceholder("org.springframework.ide.eclipse.boot.dash.views.BootDashView");
+		IFolderLayout launch = layout.createFolder("launch", IPageLayout.BOTTOM, 0.5f, "outline");
+		launch.addView("org.eclipse.debug.ui.launchView");
+		launch.addView("org.eclipse.buildship.ui.views.taskview");
+		launch.addView("org.eclipse.wst.server.ui.ServersView");
+		launch.addPlaceholder("org.springframework.ide.eclipse.boot.dash.views.BootDashView");
 
 		// ツールバーのアイコン・セット
 		layout.addActionSet(JavaUI.ID_ACTION_SET);
@@ -107,7 +107,7 @@ public class PleiadesJavaPerspectiveFactory implements IPerspectiveFactory {
 		layout.addShowViewShortcut("org.eclipse.wst.server.ui.ServersView");
 		layout.addShowViewShortcut("org.springframework.ide.eclipse.boot.dash.views.BootDashView");
 		layout.addShowViewShortcut("de.babe.eclipse.plugins.quickREx.views.QuickRExView");
-		layout.addShowViewShortcut("org.eclipse.debug.ui.launchview");
+		layout.addShowViewShortcut("org.eclipse.debug.ui.launchView");
 
 		// メニュー > ウィンドウ > パースペクティブを開く
 		layout.addPerspectiveShortcut(JavaUI.ID_PERSPECTIVE);

@@ -37,7 +37,7 @@ public class PleiadesJavaPerspectiveFactory implements IPerspectiveFactory {
 		explorer.addPlaceholder(JavaPlugin.ID_RES_NAV);
 		explorer.addPlaceholder(JavaUI.ID_TYPE_HIERARCHY);
 
-		IFolderLayout outline = layout.createFolder("outline", IPageLayout.RIGHT, 0.5f, "explorer");
+		IFolderLayout outline = layout.createFolder("outline", IPageLayout.RIGHT, 0.51f, "explorer");
 		outline.addView(IPageLayout.ID_OUTLINE);
 		outline.addPlaceholder("org.eclipse.team.sync.views.SynchronizeView");
 		outline.addPlaceholder("org.eclipse.buildship.ui.views.executionview");
@@ -48,7 +48,7 @@ public class PleiadesJavaPerspectiveFactory implements IPerspectiveFactory {
 		launch.addView("org.eclipse.debug.ui.launchView");
 		launch.addView("org.eclipse.buildship.ui.views.taskview");
 		launch.addView("org.eclipse.wst.server.ui.ServersView");
-		launch.addPlaceholder("org.springframework.ide.eclipse.boot.dash.views.BootDashView");
+		launch.addView("org.springframework.ide.eclipse.boot.dash.views.BootDashView");
 
 		// ツールバーのアイコン・セット
 		layout.addActionSet(JavaUI.ID_ACTION_SET);

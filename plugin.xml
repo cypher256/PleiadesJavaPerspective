@@ -12,4 +12,17 @@
 		</perspective>
 	</extension>
 
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            editorOnboardingImage="icons/onboarding_jperspective.png"
+            targetID="jp.sourceforge.mergedoc.PleiadesJavaPerspective">
+         <editorOnboardingCommand id="org.eclipse.ui.window.quickAccess"></editorOnboardingCommand>
+         <editorOnboardingCommand id="org.eclipse.text.quicksearch.commands.quicksearchCommand"></editorOnboardingCommand>
+         <editorOnboardingCommand id="org.eclipse.ui.window.showKeyAssist"></editorOnboardingCommand>
+         <editorOnboardingCommand id="org.eclipse.ui.newWizard"></editorOnboardingCommand>
+         <editorOnboardingCommand id="org.eclipse.jdt.ui.navigate.open.type"></editorOnboardingCommand>
+      </perspectiveExtension>
+   </extension>
+
 </plugin>

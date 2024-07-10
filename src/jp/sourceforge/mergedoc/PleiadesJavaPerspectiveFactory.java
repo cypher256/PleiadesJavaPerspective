@@ -1,8 +1,6 @@
-
 package jp.sourceforge.mergedoc;
 
 import org.eclipse.debug.ui.IDebugUIConstants;
-import org.eclipse.jdt.internal.ui.JavaPlugin;
 import org.eclipse.jdt.ui.JavaUI;
 import org.eclipse.search.ui.NewSearchUI;
 import org.eclipse.ui.IFolderLayout;
@@ -13,13 +11,12 @@ import org.eclipse.ui.progress.IProgressConstants;
 
 public class PleiadesJavaPerspectiveFactory implements IPerspectiveFactory {
 
-	@SuppressWarnings("deprecation")
 	public void createInitialLayout(IPageLayout layout) {
 
  		String editorArea = layout.getEditorArea();
 
 		IFolderLayout output = layout.createFolder("output", IPageLayout.LEFT, 0.5f, editorArea);
-		//output.addView(IPageLayout.ID_PROBLEM_VIEW); // 検証中: 問題 → マーカー
+		//output.addView(IPageLayout.ID_PROBLEM_VIEW); // 変更: 問題 → マーカー
 		output.addView("org.eclipse.ui.views.AllMarkersView");
 		output.addPlaceholder(IConsoleConstants.ID_CONSOLE_VIEW);
 		output.addPlaceholder(JavaUI.ID_JAVADOC_VIEW);
@@ -34,7 +31,6 @@ public class PleiadesJavaPerspectiveFactory implements IPerspectiveFactory {
 		IFolderLayout explorer = layout.createFolder("explorer", IPageLayout.TOP, 0.6f, "output");
 		explorer.addView(JavaUI.ID_PACKAGES);
 		explorer.addView(IPageLayout.ID_PROJECT_EXPLORER);
-		explorer.addPlaceholder(JavaPlugin.ID_RES_NAV);
 		explorer.addPlaceholder(JavaUI.ID_TYPE_HIERARCHY);
 
 		IFolderLayout outline = layout.createFolder("outline", IPageLayout.RIGHT, 0.51f, "explorer");
@@ -101,7 +97,6 @@ public class PleiadesJavaPerspectiveFactory implements IPerspectiveFactory {
 		layout.addShowViewShortcut(IDebugUIConstants.ID_BREAKPOINT_VIEW);
 		layout.addShowViewShortcut(IDebugUIConstants.ID_VARIABLE_VIEW);
 		layout.addShowViewShortcut(IDebugUIConstants.ID_DEBUG_VIEW);
-		layout.addShowViewShortcut(JavaPlugin.ID_RES_NAV);
 		layout.addShowViewShortcut("org.eclipse.pde.runtime.LogView");
 		layout.addShowViewShortcut("org.eclipse.buildship.ui.views.taskview");
 		layout.addShowViewShortcut("org.eclipse.wst.server.ui.ServersView");

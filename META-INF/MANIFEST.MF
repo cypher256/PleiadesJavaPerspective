@@ -4,7 +4,7 @@ Bundle-Name: PleiadesJavaPerspective
 Bundle-SymbolicName: jp.sourceforge.mergedoc.PleiadesJavaPerspective;singleton:=true
 Bundle-Version: 1.6.0
 Bundle-Vendor: MergeDoc Project
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Require-Bundle: org.eclipse.ui;bundle-version="3.103.0",
  org.eclipse.ui.console;bundle-version="3.5.100",
  org.eclipse.search;bundle-version="3.8.0",

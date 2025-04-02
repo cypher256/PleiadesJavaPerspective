@@ -62,11 +62,11 @@ public class PleiadesJavaPerspectiveFactory implements IPerspectiveFactory {
 		//-----------------------------------------------------------------------------------------
 		// 新規作成ウィザード - プロジェクト
 		//-----------------------------------------------------------------------------------------
+		layout.addNewWizardShortcut("org.springsource.ide.eclipse.commons.gettingstarted.wizard.boot.NewSpringBootWizard");
+		layout.addNewWizardShortcut("org.springsource.ide.eclipse.gettingstarted.wizards.import.generic.newalias");
 		// デフォルトが lib プロジェクトであることや、あまり更新されなくなっているため、ひとまず廃止
 		//layout.addNewWizardShortcut("org.eclipse.buildship.ui.wizard.project.creation");
 		layout.addNewWizardShortcut("org.eclipse.m2e.core.wizards.Maven2ProjectWizard");
-		layout.addNewWizardShortcut("org.springsource.ide.eclipse.commons.gettingstarted.wizard.boot.NewSpringBootWizard");
-		layout.addNewWizardShortcut("org.springsource.ide.eclipse.gettingstarted.wizards.import.generic.newalias");
 		layout.addNewWizardShortcut("org.eclipse.jst.servlet.ui.project.facet.WebProjectWizard");
 		layout.addNewWizardShortcut("org.eclipse.jdt.ui.wizards.JavaProjectWizard");
 

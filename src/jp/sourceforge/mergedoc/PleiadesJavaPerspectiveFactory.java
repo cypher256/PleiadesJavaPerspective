@@ -13,6 +13,9 @@ public class PleiadesJavaPerspectiveFactory implements IPerspectiveFactory {
 
 	public void createInitialLayout(IPageLayout layout) {
 
+		//-----------------------------------------------------------------------------------------
+		// レイアウトの設定
+		//-----------------------------------------------------------------------------------------
  		String editorArea = layout.getEditorArea();
 
 		IFolderLayout output = layout.createFolder("output", IPageLayout.LEFT, 0.5f, editorArea);
@@ -46,7 +49,9 @@ public class PleiadesJavaPerspectiveFactory implements IPerspectiveFactory {
 		launch.addView("org.eclipse.wst.server.ui.ServersView");
 		launch.addView("org.springframework.ide.eclipse.boot.dash.views.BootDashView");
 
+		//-----------------------------------------------------------------------------------------
 		// ツールバーのアイコン・セット
+		//-----------------------------------------------------------------------------------------
 		layout.addActionSet(JavaUI.ID_ACTION_SET);
 		layout.addActionSet(JavaUI.ID_ELEMENT_CREATION_ACTION_SET);
 		layout.addActionSet(IDebugUIConstants.LAUNCH_ACTION_SET);
@@ -54,15 +59,20 @@ public class PleiadesJavaPerspectiveFactory implements IPerspectiveFactory {
 		layout.addActionSet("org.eclipse.wst.web.ui.wizardsActionSet");
 		//layout.addActionSet("org.eclipse.jst.j2ee.J2eeMainActionSet"); // 頻度低のため使用しない
 
+		//-----------------------------------------------------------------------------------------
 		// 新規作成ウィザード - プロジェクト
-		layout.addNewWizardShortcut("org.eclipse.buildship.ui.wizard.project.creation");
+		//-----------------------------------------------------------------------------------------
+		// デフォルトが lib プロジェクトであることや、あまり更新されなくなっているため、ひとまず廃止
+		//layout.addNewWizardShortcut("org.eclipse.buildship.ui.wizard.project.creation");
 		layout.addNewWizardShortcut("org.eclipse.m2e.core.wizards.Maven2ProjectWizard");
 		layout.addNewWizardShortcut("org.springsource.ide.eclipse.commons.gettingstarted.wizard.boot.NewSpringBootWizard");
 		layout.addNewWizardShortcut("org.springsource.ide.eclipse.gettingstarted.wizards.import.generic.newalias");
 		layout.addNewWizardShortcut("org.eclipse.jst.servlet.ui.project.facet.WebProjectWizard");
 		layout.addNewWizardShortcut("org.eclipse.jdt.ui.wizards.JavaProjectWizard");
 
+		//-----------------------------------------------------------------------------------------
 		// 新規作成ウィザード - ファイル作成ウィザード
+		//-----------------------------------------------------------------------------------------
 		layout.addNewWizardShortcut("org.eclipse.jdt.ui.wizards.NewPackageCreationWizard");
 		// 簡単に Java 要素のみ制限できないため有効にしない、ツールバーからは起動可能、Jakarta 未対応
 		//layout.addNewWizardShortcut("org.eclipse.jst.servlet.ui.internal.wizard.AddServletWizard");
@@ -82,7 +92,9 @@ public class PleiadesJavaPerspectiveFactory implements IPerspectiveFactory {
 		layout.addNewWizardShortcut("org.eclipse.wst.css.ui.internal.wizard.NewCSSWizard");
 		layout.addNewWizardShortcut("org.eclipse.wst.jsdt.ui.NewJSWizard");
 
+		//-----------------------------------------------------------------------------------------
 		// メニュー > ウィンドウ > ビューの表示
+		//-----------------------------------------------------------------------------------------
 		layout.addShowViewShortcut(JavaUI.ID_PACKAGES);
 		layout.addShowViewShortcut(JavaUI.ID_TYPE_HIERARCHY);
 		layout.addShowViewShortcut(JavaUI.ID_SOURCE_VIEW);
@@ -104,7 +116,9 @@ public class PleiadesJavaPerspectiveFactory implements IPerspectiveFactory {
 		layout.addShowViewShortcut("de.babe.eclipse.plugins.quickREx.views.QuickRExView");
 		layout.addShowViewShortcut("org.eclipse.debug.ui.launchView");
 
+		//-----------------------------------------------------------------------------------------
 		// メニュー > ウィンドウ > パースペクティブを開く
+		//-----------------------------------------------------------------------------------------
 		layout.addPerspectiveShortcut(JavaUI.ID_PERSPECTIVE);
 		layout.addPerspectiveShortcut(IDebugUIConstants.ID_DEBUG_PERSPECTIVE);
 	}

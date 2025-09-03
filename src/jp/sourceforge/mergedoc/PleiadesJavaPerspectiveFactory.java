@@ -19,8 +19,8 @@ public class PleiadesJavaPerspectiveFactory implements IPerspectiveFactory {
  		String editorArea = layout.getEditorArea();
 
 		IFolderLayout output = layout.createFolder("output", IPageLayout.LEFT, 0.5f, editorArea);
-		//output.addView(IPageLayout.ID_PROBLEM_VIEW); // 変更: 問題 → マーカー
 		output.addView("com.microsoft.copilot.eclipse.ui.chat.ChatView");
+		//output.addView(IPageLayout.ID_PROBLEM_VIEW); // 変更: 問題 → マーカー
 		output.addView("org.eclipse.ui.views.AllMarkersView");
 		output.addPlaceholder(IConsoleConstants.ID_CONSOLE_VIEW);
 		output.addPlaceholder(JavaUI.ID_JAVADOC_VIEW);
